@@ -8,7 +8,7 @@ def main():
     if not 1 <= len(LINE) <= 200 or len(encoded) > 200 or not LINE.strip():
         raise ValueError("entry line must be 1-200 characters")
     if any(ord(c) < 32 and c not in "\t" for c in LINE):
-        raise ValueError("entry line must not contain control characters")
+        raise ValueError("entry line must not contain control characters (only tab is allowed)")
     if "\n" in LINE or "\r" in LINE:
         raise ValueError("entry must be a single line")
     print(LINE)
