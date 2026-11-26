@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Write the one-line roast to entry.txt for the make.fun bounty."""
+"""Write the one-line roast to entry.txt for the make.fun bounty.
+
+Output contract: the program writes exactly ENTRY_LINE (105 chars, one
+em dash, no trailing newline) to ``entry.txt`` in ``$MAKEFUN_OUTPUT_DIR``
+(default ``/output``). The entry must stay a single non-empty line within
+the 200-character cap enforced by :func:`validate_entry`; any change to
+ENTRY_LINE must be re-verified byte-for-byte against the fixed entry line.
+"""
 
 import os
 
